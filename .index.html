@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vascular Surgery: A Student's Guide</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f8fc;
+      color: #222;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 2rem;
+    }
+
+    .left, .right {
+      padding: 2rem;
+      flex: 1 1 300px;
+    }
+
+    .left {
+      background-color: #0077cc;
+      color: white;
+      border-radius: 10px;
+      max-width: 500px;
+    }
+
+    .right h2 {
+      color: #003366;
+    }
+
+    .button {
+      background-color: #0056b3;
+      color: white;
+      padding: 1rem 1.5rem;
+      margin: 1rem 0;
+      text-decoration: none;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      display: inline-block;
+    }
+
+    .button:hover {
+      background-color: #003d80;
+    }
+
+    iframe {
+      width: 100%;
+      height: 700px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+
+    img.surgery {
+      max-width: 100%;
+      border-radius: 12px;
+      margin: 1.5rem 0;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    }
+
+    .facts-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 2rem;
+      background: #e6fff2;
+      gap: 2rem;
+    }
+
+    .fact-box {
+      background-color: #b2f0c0;
+      border-radius: 10px;
+      padding: 1rem;
+      width: 220px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .fact-box h3 {
+      margin-top: 0;
+      color: #005026;
+    }
+
+    footer {
+      background: #002f5f;
+      color: white;
+      text-align: center;
+      padding: 1.5rem 0;
+      margin-top: 4rem;
+    }
+  </style>
+  <script>
+    function toggleTextbook() {
+      var section = document.getElementById("textbook-section");
+      section.style.display = section.style.display === "none" ? "block" : "none";
+    }
+
+    function toggleInstructions() {
+      var section = document.getElementById("publish-instructions");
+      section.style.display = section.style.display === "none" ? "block" : "none";
+    }
+  </script>
+</head>
+<body>
+
+<header style="background-color:#003366; color:white; text-align:center; padding:2rem;">
+  <h1>Vascular Surgery: A Student's Guide</h1>
+</header>
+
+<div class="container">
+  <div class="left">
+    <h2>About the Book</h2>
+    <p>This textbook is written to help high school students understand the basics of vascular surgery. It covers everything from how veins and arteries work to what happens during surgery to treat vein-related diseases.</p>
+    <p><strong>Why it's useful for students:</strong></p>
+    <ul>
+      <li>Explains anatomy and surgical topics in clear, simple language.</li>
+      <li>Helps prepare for biology, anatomy, or pre-med interest.</li>
+      <li>Inspires students to explore science and medicine early.</li>
+    </ul>
+    <!-- Make sure the image file 'surgery_operating_room.png' is in the same folder as this HTML file or update the path below -->
+    <img class="surgery" src="surgery_operating_room.png" alt="Surgeons operating in sterile environment">
+  </div>
+
+  <div class="right">
+    <h2>Read the Book</h2>
+    <button class="button" onclick="toggleTextbook()">📘 View My Textbook</button>
+    <div id="textbook-section" style="display:none;">
+      <iframe src="Vascular_Surgery_Leen_Abdelaziz.pdf" title="Vascular Surgery Textbook"></iframe>
+      <br>
+      <!-- Download button styled as a link -->
+      <a class="button" href="Vascular_Surgery_Leen_Abdelaziz.pdf" download target="_blank">⬇️ Download This Book</a>
+    </div>
+
+    <h2>Publish Your Own Book</h2>
+    <button class="button" onclick="toggleInstructions()">🚀 How to Publish</button>
+    <div id="publish-instructions" style="display:none;">
+      <ol>
+        <li>Create a GitHub account at <a href="https://github.com" target="_blank">GitHub.com</a>.</li>
+        <li>Create a new repository and upload your HTML and PDF files.</li>
+        <li>Go to Settings &gt; Pages, choose the main branch and root folder.</li>
+        <li>Click Save. Your book will be published at:<br><code>https://yourusername.github.io/yourbook</code></li>
+      </ol>
+    </div>
+
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:leen.abdelaziz@ais.edu.jo">leen.abdelaziz@ais.edu.jo</a></p>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <textarea name="review" rows="4" cols="40" placeholder="Leave a review..."></textarea><br><br>
+      <input class="button" type="submit" value="Submit Review">
+    </form>
+  </div>
+</div>
+
+<!-- FACT BOXES SECTION -->
+<div class="facts-container">
+  <div class="fact-box">
+    <h3>Heart Power</h3>
+    <p>The human heart beats around 70 times per minute.</p>
+  </div>
+  <div class="fact-box">
+    <h3>Body Highway</h3>
+    <p>Blood vessels in the human body stretch over 60,000 miles.</p>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 Leen Abdelaziz | Vascular Surgery Student Edition</p>
+</footer>
+
+</body>
+</html>
